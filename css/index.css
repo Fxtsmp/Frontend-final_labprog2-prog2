@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../assets/marvel-deadpool-movie-wallpaper-hd-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sing-in ,.sing-up{
+    width: 90vw;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    transition: all .5s ease-out;
+
+}
+.message{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #f2f2f2;
+    flex-direction: column;
+}
+.message h2{
+    font-size: 30px;
+}
+.message h2 span{
+    color: red;
+}
+.message p{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin:10px 
+}
+.message button{
+    padding: 10px;
+    width: 95px;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-transform: capitalize;
+    color: #f2f2f2;
+    cursor: pointer;
+    font-size: 15px;
+}
+.message button:hover{
+    background-color: aliceblue;
+    color: black;
+    transition: 0.5s ease all;
+}
+.form-container .loginform ,.registerform{
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.form-container label{
+    font-size: 25px;
+    color: #f2f2f2;
+    text-transform: capitalize;
+}
+.form-container h2{
+    font-size: 30px;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+.form-container form input{
+    margin: 10px 0px;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    color: aliceblue;
+}
+.form-container form input::placeholder{
+    color: aliceblue;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.form-container form .btn{
+    border: 1px solid white;
+    background-color: aliceblue;
+    color: black;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.form-container form .btn:hover{
+    background-color: black;
+    color: aliceblue;
+    transition: 0.4s ease all;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.sing-in{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.sing-up.active{
+    opacity: 0;
+    visibility: hidden;
+}
+.sing-in.active{
+    opacity:1;
+    visibility:visible;
+}
+.no-login{
+    width: 150px;
+    padding: 10px;
+    background-color: rgba(255, 0, 0,0.3);
+    border: 1px solid black;
+    font-size: 18px;
+    color:#f2f2f2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: absolute;
+    margin: 0;
+    top: 30px;
+    left: 1750px;
+}
+.no-login:hover{
+    background: aliceblue;
+    color: black;
+    transition: 0.8s ease all;
+}
