@@ -6,13 +6,14 @@ async function movieCharger(){
     let data = await respones.json()
     console.log(data)
     films= data.films
+    console.log(films)
     let pelicula= ''
     films.forEach( movie => {
         pelicula+=`
         <div class="movie-card">
     <img src="${movie.cover}" >
     <h2 class="title"> Titulo:${movie.title}</h2>
-    <button class="select-movie" onclick="getMovie(${movie.id})">Ver Pelicula</button>
+    <button class="select-movie" onclick="getMovie(${movie.title})">Ver Pelicula</button>
 </div>
         `
         movieContainer.innerHTML=pelicula;
@@ -21,10 +22,9 @@ async function movieCharger(){
 }
 movieCharger();
 
-async function getMovie(filmid){
-    film = fetch('https://eduars.pythonanywhere.com/comments/film_id/')
-    let data = await film.json()
-    console.log(data);
+function getMovie(title){
+    localStorage.setItem('name',title)
+    window.location.assign('movie.html')
 }
 
 
